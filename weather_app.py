@@ -15,19 +15,22 @@ def main():
 
     webjson = get_json_from_web(city_name, country_name)
     report = get_weather(webjson)
-    unicelcius = u"\u2103"
-    celcius = unicelcius.encode("utf-8")
 
-    print("The temperature in %s, %s is %.1f%s and weather reports %s" % (
+    try:
+        print(u"The temperature in %s, %s is %.1f\u2103 and weather reports %s" % (
         report.loc,
         report.country,
         report.temp,
-        unicelcius,
         report.cond
-    ))
-
+        ))
+    except:
+        print("The temperature in %s, %s is %.1f deg Celcius and weather reports %s" % (
+        report.loc,
+        report.country,
+        report.temp,
+        report.cond
+        ))
     # display for the forecast
-
 
 def print_the_header():
     print '---------------------------------'
