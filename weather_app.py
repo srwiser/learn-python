@@ -16,7 +16,7 @@ def main():
     webjson = get_json_from_web(city_name, country_name)
     report = get_weather(webjson)
 
-    print(u"The temperature in {}, {} is {:.1f}\u2103 and weather reports {}".format(
+    print(u"The temperature in %s, %s is %.1f\u2103 and weather reports %s" % (
         report.loc,
         report.country,
         report.temp,
