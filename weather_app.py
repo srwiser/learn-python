@@ -15,11 +15,14 @@ def main():
 
     webjson = get_json_from_web(city_name, country_name)
     report = get_weather(webjson)
+    unicelcius = u"\u2103"
+    celcius = unicelcius.encode("utf-8")
 
-    print(u"The temperature in %s, %s is %.1f\u2103 and weather reports %s" % (
+    print("The temperature in %s, %s is %.1f%s and weather reports %s" % (
         report.loc,
         report.country,
         report.temp,
+        unicelcius,
         report.cond
     ))
 
