@@ -8,7 +8,7 @@ import settings_local
 def main():
     print_the_header()
     base_folder = os.path.abspath(os.path.dirname(__file__))
-    folder = 'catpics'
+    folder = settings_local.catwebsite['localfolder']
     full_path = os.path.join(base_folder, folder)
     if not os.path.exists(full_path) or not os.path.isdir(full_path):
         print('Creating new directory at {}'.format(full_path))

@@ -32,7 +32,8 @@ def save(name, journal_data):
 
 
 def get_full_pathname(name):
-    filename = os.path.abspath(os.path.join('.', '../files/journals', name + '.jrl'))
+    dirpath = os.path.dirname(os.path.realpath(__file__))
+    filename = os.path.abspath(os.path.join(dirpath,'.', '../files/journals', name + '.jrl'))
     return filename
 
 

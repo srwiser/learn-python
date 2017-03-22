@@ -39,7 +39,7 @@ def print_the_header():
     print ''
 
 
-def get_json_from_web(city_name, country_name, apikey=settings_local.api['key']):
+def get_json_from_web(city_name, country_name, apikey=settings_local.weatherapi['key']):
     url = 'http://api.openweathermap.org/data/2.5/weather?q={},{}&appid={}'.format(city_name, country_name, apikey)
     response = requests.get(url)
     #print(response.status_code)

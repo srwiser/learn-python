@@ -1,7 +1,11 @@
-api = {
+weatherapi = {
     u"key": u"xxxx"
 }
 
 catwebsite = {
     u"url": u"http://consuming-python-services-api.azurewebsites.net/cats/random"
+}
+
+files = {
+    u"foldername": u"files"
 }
