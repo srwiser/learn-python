@@ -46,10 +46,9 @@ def main():
         header1, result1 = csvtodict(f1)
         header2, result2 = csvtodict(f2)
         dicttocsv(header1, header2, result1, result2, outputfile)
-        print "Successfully written to " + outputfile
+        print("Successfully written to " + outputfile)
     except:
-        print "Usage: python marks.py file1.csv file2.csv output.csv"
-
+        print("Usage: python marks.py file1.csv file2.csv output.csv")
 
 if __name__ == '__main__':
     main()

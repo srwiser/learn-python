@@ -3,7 +3,8 @@ weatherapi = {
 }
 
 catwebsite = {
-    u"url": u"http://consuming-python-services-api.azurewebsites.net/cats/random"
+    u"url": u"https://consuming-python-services-api.azurewebsites.net/cats/random",
+    u"localfolder": u"catpics"
 }
 
 files = {

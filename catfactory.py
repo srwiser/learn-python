@@ -16,7 +16,7 @@ def main():
 
     user_input = 'EMPTY'
     while user_input != 'nay':
-        user_input = raw_input('Want to see a cat pic? Yay or Nay:  ')
+        user_input = input('Want to see a cat pic? Yay or Nay:  ')
         user_input = user_input.lower().strip()
 
         if user_input == 'yay':
@@ -29,10 +29,10 @@ def main():
     print('Done, goodbye.')
 
 def print_the_header():
-    print '---------------------------------'
-    print '           Random CAT Pics'
-    print '---------------------------------'
-    print ''
+    print('---------------------------------')
+    print('           Random CAT Pics')
+    print('---------------------------------')
+    print('')
 
 
 def get_pic(url):

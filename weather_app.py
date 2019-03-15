@@ -10,8 +10,8 @@ WeatherReport = collections.namedtuple('WeatherReport',
 def main():
     print_the_header()
 
-    city_name = raw_input('Which city weather you like to know ? ')
-    country_name = raw_input('Which country are you in ? ')
+    city_name = input('Which city weather you like to know ? ')
+    country_name = input('Which country are you in ? ')
 
     webjson = get_json_from_web(city_name, country_name)
     report = get_weather(webjson)
@@ -33,14 +33,14 @@ def main():
     # display for the forecast
 
 def print_the_header():
-    print '---------------------------------'
-    print '           WEATHER APP'
-    print '---------------------------------'
-    print ''
+    print('---------------------------------')
+    print('           WEATHER APP')
+    print('---------------------------------')
+    print('')
 
 
 def get_json_from_web(city_name, country_name, apikey=settings_local.weatherapi['key']):
-    url = 'http://api.openweathermap.org/data/2.5/weather?q={},{}&appid={}'.format(city_name, country_name, apikey)
+    url = 'https://api.openweathermap.org/data/2.5/weather?q={},{}&appid={}'.format(city_name, country_name, apikey)
     response = requests.get(url)
     #print(response.status_code)
     # print(response.text[0:250])

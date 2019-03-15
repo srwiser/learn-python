@@ -2,7 +2,7 @@
 #from usingpython.com
 
 #import the modules we need, for creating a GUI...
-import Tkinter
+import tkinter
 #...and for creating random numbers.
 import random
 
@@ -43,7 +43,7 @@ def nextColour():
             score += 1
 
         #clear the text entry box.
-        e.delete(0, Tkinter.END)
+        e.delete(0, tkinter.END)
         #shuffle the list of colours.
         random.shuffle(colours)
         #change the colour to type, by changing the text _and_ the colour to a random colour value
@@ -68,30 +68,30 @@ def countdown():
         timeLabel.after(1000, countdown)
     
 #create a GUI window.
-root = Tkinter.Tk()
+root = tkinter.Tk()
 #set the title.
 root.title("TTCANTW")
 #set the size.
 root.geometry("375x200")
 
 #add an instructions label.
-instructions = Tkinter.Label(root, text="Type in the colour of the words, and not the word text!", font=('Helvetica', 12))
+instructions = tkinter.Label(root, text="Type in the colour of the words, and not the word text!", font=('Helvetica', 12))
 instructions.pack()
 
 #add a score label.
-scoreLabel = Tkinter.Label(root, text="Press enter to start", font=('Helvetica', 12))
+scoreLabel = tkinter.Label(root, text="Press enter to start", font=('Helvetica', 12))
 scoreLabel.pack()
 
 #add a time left label.
-timeLabel = Tkinter.Label(root, text="Time left: " + str(timeleft), font=('Helvetica', 12))
+timeLabel = tkinter.Label(root, text="Time left: " + str(timeleft), font=('Helvetica', 12))
 timeLabel.pack()
 
 #add a label for displaying the colours.
-label = Tkinter.Label(root, font=('Helvetica', 60))
+label = tkinter.Label(root, font=('Helvetica', 60))
 label.pack()
 
 #add a text entry box for typing in colours.
-e = Tkinter.Entry(root)
+e = tkinter.Entry(root)
 #run the 'startGame' function when the enter key is pressed.
 root.bind('<Return>', startGame)
 e.pack()

@@ -9,9 +9,9 @@ def print_header():
 
 def get_bday():
     print('Tell us when were you born: ')
-    year = int(raw_input('Year [YYYY]: '))
-    month = int(raw_input('Month [MM]: '))
-    day = int(raw_input('Day [DD]: '))
+    year = int(input('Year [YYYY]: '))
+    month = int(input('Month [MM]: '))
+    day = int(input('Day [DD]: '))
 
     birthday = datetime.datetime(year,month,day)
 
